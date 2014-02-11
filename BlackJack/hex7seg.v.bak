@@ -1,0 +1,15 @@
+module hex7seg(NEW, OPEN, ALARM,leds);
+  input NEW, OPEN, ALARM;
+  output reg [0:6]leds;
+  wire [3:0] bits;
+  assign bits= {NEW, OPEN, ALARM};
+
+always@(bits) 
+  case(bits)
+		0:leds = 7'b1111110;
+		1:leds = 7'b0001000;
+		2:leds = 7'b0000001;
+		4:leds = 7'b0001001;
+  endcase  
+
+endmodule

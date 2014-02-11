@@ -1,0 +1,11 @@
+module High(Reset,Hit,Stay);
+
+conditioner();
+adder();
+hex7seg();
+StateMachine();
+
+
+
+
+endmodule
